@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sai Hiranmayee Machavolu - Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename" style="text-align: center;">Sai Hiranmayee Machavolu</h1>
+
+    </a>
+
+    <div class="social-links text-center">
+      <a href="mailto:your-venkatamachavolu1123@gmail.com" class="mail" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+      <a href="https://www.linkedin.com/in/sai-hiranmayee-56b455192" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/hiranmayee1123" class="github" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://medium.com/@hiranmayee1123" class="medium" target="_blank"><i class="bi bi-medium"></i></a>
+  </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#projects"><i class="bi bi-images navicon"></i> Projects</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+   <!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+  
+  <!-- Background Image with Overlay -->
+  <div class="hero-bg">
+    <img src="assets/img/hero-bg.jpg" alt="Hero Background" class="hero-img">
+    <div class="overlay"></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="container text-center hero-content" data-aos="fade-up">
+    <h2 class="hero-title">Venkata Subbu Sai Hiranmayee Machavolu</h2>
+    <p class="hero-subtitle">I'm <span id="changing-text"></span><span class="cursor">|</span></p>
+    <a href="#about" class="btn btn-primary">Learn More</a>
+  </div>
+
+</section><!-- /Hero Section -->
+
+<!-- JavaScript for Typing Animation -->
+<script>
+  const textArray = [
+    "just a data nerd making sense of the world",
+    "a data engineer turning complexity into clarity",
+    "the bridge between data and decision-making",
+    "a problem solver: fueled by data and innovation"
+  ];
+
+  let textIndex = 0;
+  let charIndex = 0;
+  const changingText = document.getElementById("changing-text");
+  const cursor = document.querySelector(".cursor");
+
+  function typeText() {
+    if (charIndex < textArray[textIndex].length) {
+      changingText.textContent += textArray[textIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeText, 100); // Typing speed
+    } else {
+      setTimeout(eraseText, 2000); // Pause before erasing
+    }
+  }
+
+  function eraseText() {
+    if (charIndex > 0) {
+      changingText.textContent = textArray[textIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(eraseText, 50); // Erasing speed
+    } else {
+      textIndex = (textIndex + 1) % textArray.length; // Move to next text
+      setTimeout(typeText, 500);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeText);
+</script>
+
+<!-- CSS for Styling -->
+<style>
+  /* Hero Section Styling */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+
+  /* Background Image */
+  .hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+
+  /* Overlay Effect */
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  }
+
+  /* Hero Content */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+
+  /* Smooth Typing Effect */
+  #changing-text {
+    color: #ff8c00; /* Highlight Color */
+    font-weight: bold;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .cursor {
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  /* Call-to-Action Button */
+  .btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ff8c00;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #ff5700;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<!-- About Section -->
+<section id="about" class="about section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2 class="about-title">Who Am I?</h2>
+    <p class="about-subtitle">
+      <span class="highlight">Passionate Data Engineer</span> | 
+      <span class="highlight">AI Innovator</span> | 
+      <span class="highlight">Problem Solver</span>
+    </p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="about-content">
+      <p class="intro-text">
+        Hi, I’m <strong>Venkata Subbu Sai Hiranmayee Machavolu</strong>.  
+        I don’t just work with data—I <span class="highlight">transform it</span>.  
+        With expertise in <strong>data science</strong>, <strong>machine learning</strong>, and <strong>software development</strong>,  
+        I uncover insights that drive <span class="highlight">real-world impact</span>.
+      </p>
+
+
+      <!-- Achievements -->
+      <div class="achievements">
+        <p>🎓 <strong>Master’s in Computer Science</strong> at <strong>Clemson University</strong>,  
+          specializing in <strong>Data Engineering</strong>, <strong>AI</strong>, and <strong>Cloud Computing</strong>.
+        </p>
+        <p>🚀 Developed an <strong>AI-powered Car Side Mirror Angle Prediction</strong> system,  
+          published in a <strong>Scopus journal</strong>.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <p class="career-goals">
+        🔍 <strong>Seeking full-time opportunities</strong> in <strong>Data Science</strong>,  
+        <strong>Machine Learning</strong>, and <strong>Data Engineering</strong>.  
+        Let’s <span class="highlight">build the future</span> together!
+      </p>
+
+      <div class="button-container">
+        <a href="#contact" class="btn-primary">Connect With Me</a>
+    </div>
+    </div><!-- End About Content -->
+  </div><!-- End Container -->
+
+</section><!-- /About Section -->
+
+<!-- Updated CSS -->
+<style>
+/* About Section */
+.about {
+  background: #ffffff; /* White background */
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* About Content Box */
+.about .about-content {
+  background: linear-gradient(135deg, rgba(61, 0, 102, 0.9), rgba(0, 191, 166, 0.9)); /* Vibrant Purple & Teal */
+  color: #ffffff;
+  padding: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 191, 166, 0.5);
+}
+
+
+/* Section Title */
+.about .section-title {
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+
+/* Title & Subtitle */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.4);
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Highlighted Text */
+.highlight {
+  color: #FFD700; /* Gold for contrast */
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+/* About Content */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Lighter Transparent Background */
+  backdrop-filter: blur(15px); /* Stronger Blur for Clear Glassmorphism */
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Intro Text */
+.intro-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Achievements Section */
+.achievements {
+  background: rgba(255, 255, 255, 0.2); /* Brighter for visibility */
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease-in-out;
+}
+
+/* Achievements Hover Effect */
+.achievements:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 4px 25px rgba(0, 191, 166, 0.6);
+}
+
+/* Achievements Text */
+.achievements p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+/* Career Goals */
+.career-goals {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* CTA Button */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #FFD700, #FFA500); /* Gold Gradient */
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 0px 12px rgba(255, 215, 0, 0.7);
+}
+
+/* Button Hover Effect */
+.btn-primary:hover {
+  background: linear-gradient(135deg, #FFC107, #FF8C00);
+  transform: scale(1.08);
+  box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.9);
+}
+
+/* Centering the Button */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container .btn-primary {
+  display: inline-block;
+  width: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+      text-align: center;
+      padding: 15px;
+  }
+
+  .achievements {
+      text-align: center;
+      padding: 10px;
+  }
+
+  .btn-primary {
+      font-size: 1.1rem;
+      padding: 12px 25px;
+  }
+}
+
+
+   
+<!-- Skills & Technologies Section -->
+<section id="skills" class="skills section">
+  <div class="container section-title">
+    <h2>Technical Expertise</h2>
+    <p>Key technologies and tools I work with:</p>
+  </div>
+
+  <div class="container">
+    <div class="badge-container">
+      <span class="skill-badge">Python</span>
+      <span class="skill-badge">SQL</span>
+      <span class="skill-badge">NoSQL</span>
+      <span class="skill-badge">JavaScript</span>
+      <span class="skill-badge">Bash</span>
+      <span class="skill-badge">PostgreSQL</span>
+      <span class="skill-badge">MySQL</span>
+      <span class="skill-badge">MongoDB</span>
+      <span class="skill-badge">Amazon Redshift</span>
+      <span class="skill-badge">Snowflake</span>
+      <span class="skill-badge">DynamoDB</span>
+      <span class="skill-badge">Apache Airflow</span>
+      <span class="skill-badge">Apache Spark</span>
+      <span class="skill-badge">Apache Kafka</span>
+      <span class="skill-badge">AWS</span>
+      <span class="skill-badge">GCP</span>
+      <span class="skill-badge">Digital Ocean</span>
+      <span class="skill-badge">Hadoop</span>
+      <span class="skill-badge">Hive</span>
+      <span class="skill-badge">HDFS</span>
+      <span class="skill-badge">Pandas</span>
+      <span class="skill-badge">PySpark</span>
+      <span class="skill-badge">SQLAlchemy</span>
+      <span class="skill-badge">Informatica</span>
+      <span class="skill-badge">Power BI</span>
+      <span class="skill-badge">Tableau</span>
+      <span class="skill-badge">Figma</span>
+      <span class="skill-badge">Adobe XD</span>
+      <span class="skill-badge">QT Design Studio</span>
+      <span class="skill-badge">Git</span>
+      <span class="skill-badge">Jenkins</span>
+      <span class="skill-badge">Docker</span>
+      <span class="skill-badge">Terraform</span>
+    </div>
+  </div>
+</section><!-- /Skills Section -->
+
+<!-- CSS -->
+<style>
+  /* Skills Section Styling */
+  .skills {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .skills h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .skills p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  /* Badge Container */
+  .badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 20px auto;
+  }
+
+  /* Skill Badges */
+  .skill-badge {
+    background: #ff7f00;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s;
+  }
+
+  .skill-badge:hover {
+    background: #cc5500;
+    transform: scale(1.1);
+  }
+</style>
+
+
+    <!-- Skills & Technologies Section -->
+<section id="skills" class="skills section">
+  <div class="container section-title">
+    <h2>Technical Expertise</h2>
+    <p>Key technologies and tools I work with:</p>
+  </div>
+
+  <div class="container">
+    <div class="badge-container">
+      <span class="skill-badge">Python</span>
+      <span class="skill-badge">SQL</span>
+      <span class="skill-badge">NoSQL</span>
+      <span class="skill-badge">JavaScript</span>
+      <span class="skill-badge">Bash</span>
+      <span class="skill-badge">PostgreSQL</span>
+      <span class="skill-badge">MySQL</span>
+      <span class="skill-badge">MongoDB</span>
+      <span class="skill-badge">Amazon Redshift</span>
+      <span class="skill-badge">Snowflake</span>
+      <span class="skill-badge">DynamoDB</span>
+      <span class="skill-badge">Apache Airflow</span>
+      <span class="skill-badge">Apache Spark</span>
+      <span class="skill-badge">Apache Kafka</span>
+      <span class="skill-badge">AWS</span>
+      <span class="skill-badge">GCP</span>
+      <span class="skill-badge">Digital Ocean</span>
+      <span class="skill-badge">Hadoop</span>
+      <span class="skill-badge">Hive</span>
+      <span class="skill-badge">HDFS</span>
+      <span class="skill-badge">Pandas</span>
+      <span class="skill-badge">PySpark</span>
+      <span class="skill-badge">SQLAlchemy</span>
+      <span class="skill-badge">Informatica</span>
+      <span class="skill-badge">Power BI</span>
+      <span class="skill-badge">Tableau</span>
+      <span class="skill-badge">Figma</span>
+      <span class="skill-badge">Adobe XD</span>
+      <span class="skill-badge">QT Design Studio</span>
+      <span class="skill-badge">Git</span>
+      <span class="skill-badge">Jenkins</span>
+      <span class="skill-badge">Docker</span>
+      <span class="skill-badge">Terraform</span>
+    </div>
+  </div>
+</section>
+
+<!-- Updated CSS for Skills Section -->
+<style>
+  /* Skills Section Styling */
+  .skills {
+    background: linear-gradient(135deg, #3D0066, #00BFA6); /* Matching the About Section */
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .skills h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFD700; /* Gold Highlight */
+  }
+
+  .skills p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #E0E0E0;
+  }
+
+  /* Badge Container */
+  .badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 20px auto;
+  }
+
+  /* Skill Badges */
+  .skill-badge {
+    background: rgba(255, 255, 255, 0.15); /* Slightly Transparent White */
+    color: #FFD700; /* Gold Text */
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .skill-badge:hover {
+    background: #FFD700; /* Gold Hover */
+    color: #3D0066; /* Purple Text */
+    transform: scale(1.1);
+    border-color: #ffffff;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .badge-container {
+      gap: 8px;
+    }
+
+    .skill-badge {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+</style>
+
+
+
+<section id="resume" class="resume-section">
+  <div class="container">
+      <!-- Section Title -->
+      <div class="section-title">
+          <h2>Resume</h2>
+          <p>My educational background, certifications, leadership roles, publications, and professional experience.</p>
+      </div>
+
+      <!-- Resume Grid -->
+      <div class="resume-grid">
+
+          <!-- Left Column: Education & Additional Sections -->
+          <div class="resume-column">
+              <h3 class="resume-title">Education</h3>
+
+              <div class="resume-item">
+                  <h4>Master of Science in computer Science</h4>
+                  <h5>Aug 2023 - May 2025</h5>
+                  <p><em>Clemson University, USA</em></p>
+                  <p><strong>Relevant Coursework:</strong> Applied Data Science, Deep Learning, Data Mining, Cloud Computing, Statistics</p>
+              </div>
+
+              <div class="resume-item">
+                  <h4>Bachelor of Science in Computer Science</h4>
+                  <h5>June 2018 - May 2022</h5>
+                  <p><em>SRM University, India</em></p>
+                  <p><strong>Relevant Coursework:</strong> Artificial Intelligence and Machine Learning, Database Management, Software Engineering, Data Structures</p>
+              </div>
+
+              <!-- Certifications -->
+              <h3 class="resume-title">Certifications</h3>
+
+              <div class="resume-item">
+                  <ul>
+                      <li>Silver Medal, Research Day 2022 Competition, SRM University</li>
+                      <li>Group 1 Investigators Conducting Social and Behavioral Science Research (SBR) Certificate</li>
+                      <li>Introduction to Cloud Computing - Azure Certificate by Microsoft</li>
+                  </ul>
+              </div>
+
+              <!-- Leadership & Volunteering -->
+              <h3 class="resume-title">Leadership & Volunteering</h3>
+
+              <div class="resume-item">
+                  <ul>
+                      <li>Vice President, LogicPlay Student Club, SRM University</li>
+                      <li>Active participant in Tech Lunch and Learns, Women+ in Tech events, and mentorship programs</li>
+                      <li>Volunteered in Seed Balls Making Event</li>
+                  </ul>
+              </div>
+
+              <!-- Publications -->
+              <h3 class="resume-title">Publications</h3>
+
+              <div class="resume-item">
+                  <h4>Car Side Mirrors Angle Prediction Based on Pupil Position</h4>
+                  <h5>Published in Scopus Journal</h5>
+                  <p>Developed a novel approach using eye-tracking technology to optimize car side mirror angles for enhanced driver safety and ergonomics.</p>
+              </div>
+          </div>
+
+          <!-- Right Column: Experience -->
+          <div class="resume-column">
+              <h3 class="resume-title">Experience</h3>
+
+              <div class="resume-item">
+                  <h4>Graduate Assistant - Data Visualization</h4>
+                  <h5>Aug 2024 - Present</h5>
+                  <p><em>Clemson University, USA</em></p>
+                  <ul>
+                      <li>Designed interactive dashboards for survey results.</li>
+                      <li>Analyzed national academic library data for workforce insights.</li>
+                      <li>Assisted in research and reporting using visualization tools.</li>
+                  </ul>
+              </div>
+
+              <div class="resume-item">
+                  <h4>Summer Data Engineer Intern</h4>
+                  <h5>Jun 2024 - Aug 2024</h5>
+                  <p><em>LPL Financial, USA</em></p>
+                  <ul>
+                      <li>Developed data quality rules to enhance data integrity.</li>
+                      <li>Implemented exception handling to reduce data discrepancies.</li>
+                      <li>Managed data pipelines and optimized data flow processes.</li>
+                  </ul>
+              </div>
+
+              <div class="resume-item">
+                  <h4>Software Engineering Trainee</h4>
+                  <h5>Jan 2021 - Mar 2023</h5>
+                  <p><em>Digital Disruption PTE. LTD, Singapore</em></p>
+                  <ul>
+                      <li>Developed full-stack web applications using Angular, React, Node.js, and Django.</li>
+                      <li>Created Python and data science learning materials for an e-learning platform.</li>
+                      <li>Implemented CI/CD pipelines for efficient software deployment.</li>
+                      <li>Worked in Agile teams, managing tasks via Jira and collaborating with cross-functional teams.</li>
+                  </ul>
+              </div>
+
+              <div class="resume-item">
+                  <h4>Data Science Intern</h4>
+                  <h5>Jan 2021 - May 2021</h5>
+                  <p><em>Technocolabs Softwares, India</em></p>
+                  <ul>
+                      <li>Developed machine learning models for healthcare applications.</li>
+                      <li>Cleaned and preprocessed large datasets for improved model accuracy.</li>
+                      <li>Implemented feature engineering techniques to enhance model performance.</li>
+                  </ul>
+              </div>
+
+          </div> <!-- End Experience Column -->
+
+      </div> <!-- End Resume Grid -->
+  </div>
+</section>
+
+
+
+
+ <!-- Projects Section -->
+<section id="projects" class="projects section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Projects</h2>
+    <p>A selection of my work in data analytics, machine learning, and business intelligence.</p>
+  </div>
+
+  <div class="container">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <ul class="project-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-data">Data Projects</li>
+        <li data-filter=".filter-ml">Machine Learning</li>
+        <li data-filter=".filter-dashboard">Dashboards</li>
+      </ul>
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <!-- Project: E-commerce Data Pipeline -->
+        <div class="col-lg-4 col-md-6 project-item isotope-item filter-data">
+          <div class="project-content h-100">
+            <h4>E-commerce Data Pipeline & Analytics</h4>
+            <p>Built an end-to-end data pipeline for an e-commerce platform, enabling real-time analytics and insights.</p>
+            <a href="https://github.com/hiranmayee1123/E-Commerce-Data-Pipeline-and-Analytics-Platform" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div>
+
+        <!-- Project: Data Mining Projects -->
+        <div class="col-lg-4 col-md-6 project-item isotope-item filter-data">
+          <div class="project-content h-100">
+            <h4>Deep Learning Projects (Coursework)</h4>
+            <p>Implemented various deep learning techniques for pattern recognition and insights extraction.</p>
+            <a href="https://github.com/hiranmayee1123/Deep_Learning" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div>
+
+        <!-- Project: Car Resale Price Prediction -->
+        <div class="col-lg-4 col-md-6 project-item isotope-item filter-ml">
+          <div class="project-content h-100">
+            <h4>Car Resale Price Prediction</h4>
+            <p>Developed an ML model to predict car resale prices using regression techniques.</p>
+            <a href="https://github.com/hiranmayee1123/car-resale-price-prediction" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div>
+
+        <!-- Project: Car Side Mirrors Angle Prediction -->
+        <div class="col-lg-4 col-md-6 project-item isotope-item filter-ml">
+          <div class="project-content h-100">
+            <h4>Car Side Mirrors Angle Prediction</h4>
+            <p>Used eye-tracking and ML models to predict optimal side mirror angles based on pupil position.</p>
+            <a href="https://philstat.org/index.php/MSEA/article/view/650" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div>
+
+        <!-- Project: Dominant Color Extraction -->
+        <div class="col-lg-4 col-md-6 project-item isotope-item filter-data">
+          <div class="project-content h-100">
+            <h4>Dominant Color Extraction (Python)</h4>
+            <p>Implemented an image processing algorithm to extract dominant colors from images using clustering techniques.</p>
+            <a href="https://github.com/hiranmayee1123/Dominant-Colour-Extraction" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div>
+
+        <!-- Project: Dashboards (Power BI & Tableau) -->
+        <div class="col-lg-4 col-md-6 project-item isotope-item filter-dashboard">
+          <div class="project-content h-100">
+            <h4>Dashboards (Power BI & Tableau)</h4>
+            <p>Created interactive dashboards for business insights using Power BI and Tableau.</p>
+            <a href="https://github.com/hiranmayee1123" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div>
+
+      </div><!-- End Projects Container -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Projects Section -->
+
+
+
+
+   <!-- Contact Section -->
+   <section id="contact" class="contact section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me using this form!</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+            <div class="col-lg-8 offset-lg-2">
+                <form action="https://formspree.io/f/meoervqz" method="POST" class="php-email-form" id="contact-form">
+                    <div class="row gy-4">
+
+                        <div class="col-md-6">
+                            <label for="name-field" class="pb-2">Your Name</label>
+                            <input type="text" name="name" id="name-field" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="email-field" class="pb-2">Your Email</label>
+                            <input type="email" name="email" id="email-field" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="subject-field" class="pb-2">Subject</label>
+                            <input type="text" name="subject" id="subject-field" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="message-field" class="pb-2">Message</label>
+                            <textarea name="message" id="message-field" rows="5" class="form-control" required></textarea>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <button type="submit">Send Message</button>
+                            <p id="form-response" style="display: none; color: green; margin-top: 10px;">Message sent successfully!</p>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section><!-- /Contact Section -->
+
+<!-- JavaScript for Form Submission -->
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        var form = this;
+        var formData = new FormData(form);
+        var formResponse = document.getElementById("form-response");
+
+        fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if (response.ok) {
+                formResponse.style.display = "block"; // Show success message
+                form.reset(); // Clear form fields
+            } else {
+                alert("There was an error submitting your message. Please try again.");
+            }
+        }).catch(error => {
+            alert("Something went wrong. Please try again.");
+        });
+    });
+</script>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="">Venkata Machavolu</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
